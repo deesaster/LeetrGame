@@ -10,7 +10,8 @@ import com.badlogic.gdx.Gdx;
  * Date: 11-06-04
  * Time: 10:36 AM
  */
-public class GdxGame implements ApplicationListener{
+public abstract class GdxGame implements ApplicationListener{
+    Screen screen;
     /**
      * Called when the {@link com.badlogic.gdx.Application} is first created.
      */
