@@ -1,6 +1,5 @@
 package com.leetr.game;
 
-import com.badlogic.gdx.Application;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 
@@ -11,13 +10,25 @@ import com.badlogic.gdx.Gdx;
  * Time: 10:36 AM
  */
 public abstract class GdxGame implements ApplicationListener{
-    Screen screen;
+    Screen mScreen;
+
+    public void setScreen(Screen screen) {
+        if (mScreen != null) {
+            mScreen.pause();
+            mScreen.dispose();
+        }
+
+        mScreen = screen;
+    }
+
+    public abstract Screen getStartScreen();
+
     /**
      * Called when the {@link com.badlogic.gdx.Application} is first created.
      */
     @Override
     public void create() {
-        //To change body of implemented methods use File | Settings | File Templates.
+        setScreen(getStartScreen());
     }
 
     /**
@@ -26,7 +37,7 @@ public abstract class GdxGame implements ApplicationListener{
      */
     @Override
     public void resume() {
-        //To change body of implemented methods use File | Settings | File Templates.
+        mScreen.resume();
     }
 
     /**
@@ -34,7 +45,8 @@ public abstract class GdxGame implements ApplicationListener{
      */
     @Override
     public void render() {
-        Application app = Gdx.app;
+        mScreen.update(Gdx.graphics.getDeltaTime());
+        mScreen.present(Gdx.graphics.getDeltaTime());
     }
 
     /**
@@ -46,7 +58,7 @@ public abstract class GdxGame implements ApplicationListener{
      */
     @Override
     public void resize(int width, int height) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        //TODO: add resizing code
     }
 
     /**
@@ -56,7 +68,7 @@ public abstract class GdxGame implements ApplicationListener{
      */
     @Override
     public void pause() {
-        //To change body of implemented methods use File | Settings | File Templates.
+        mScreen.pause();
     }
 
     /**
@@ -64,6 +76,6 @@ public abstract class GdxGame implements ApplicationListener{
      */
     @Override
     public void dispose() {
-        //To change body of implemented methods use File | Settings | File Templates.
+        mScreen.dispose();
     }
 }
