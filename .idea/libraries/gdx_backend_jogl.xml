@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="gdx-backend-jogl">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/leetrgame-desktop/libs/gdx-backend-jogl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/leetrgame-desktop/libs/gdx-backend-jogl-natives.jar!/" />
+      <root url="jar://$PROJECT_DIR$/leetrgame-desktop/libs/gdx-natives.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/leetrgame-desktop/libs/gdx-backend-jogl-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

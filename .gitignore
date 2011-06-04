@@ -1,0 +1,7 @@
+bin/
+gen/
+out/
+/**/bin
+/**/gen
+/**/out
+/**/workspace.xml

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="gdx-backend-android">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/leetrgame-android/libs/gdx-backend-android.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/leetrgame-android/libs/gdx-backend-android-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
